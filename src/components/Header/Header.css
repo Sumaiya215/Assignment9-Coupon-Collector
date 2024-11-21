@@ -1,0 +1,14 @@
+.active{
+    font-weight: 700;
+    color:steelblue !important;
+    background-color: beige !important;
+}
+ 
+.input{
+    height: 60px;
+}
+.input::placeholder{
+    color: lightgray;
+    font-size: 18px;
+    font-weight: 700;
+}

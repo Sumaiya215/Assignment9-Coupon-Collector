@@ -1,0 +1,159 @@
+[
+    {
+      "_id": "301",
+      "brand_name": "Yellow",
+      "rating": 4.7,
+      "description": "Trendy and premium winter fashion for all.",
+      "brand_logo": "https://i.ibb.co.com/Q6QY9Xd/yellow.jpg",
+      "coupons": [
+        {
+          "coupon_code": "WINTER15",
+          "description": "15% off on all winter jackets and sweaters",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of BDT 2000",
+          "coupon_type": "percentage"
+        },
+        {
+          "coupon_code": "SCARF2024",
+          "description": "Free scarf on purchases above BDT 5000",
+          "expiry_date": "2025-01-05",
+          "condition": "Limited to select collections",
+          "coupon_type": "gift"
+        }
+      ],
+      "shop_link": "https://www.yellow.com.bd",
+      "category": "Fashion",
+      "isSaleOn": true
+    },
+    {
+      "_id": "302",
+      "brand_name": "Aarong",
+      "rating": 4.9,
+      "description": "Authentic Bangladeshi fashion for winter elegance.",
+      "brand_logo": "https://i.ibb.co.com/GtRrYtB/aarong.png",
+      "coupons": [
+        {
+          "coupon_code": "SHAWL20",
+          "description": "20% off on winter shawls and woolen wear",
+          "expiry_date": "2024-12-20",
+          "condition": "Valid on purchases over BDT 3000",
+          "coupon_type": "percentage"
+        },
+        {
+          "coupon_code": "LOYALTY2024",
+          "description": "Extra 5% off for Aarong loyalty cardholders",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid on winter collections only",
+          "coupon_type": "offer"
+        }
+      ],
+      "shop_link": "https://www.aarong.com",
+      "category": "Traditional Wear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "303",
+      "brand_name": "Cats Eye",
+      "rating": 4.6,
+      "description": "Urban winter styles for men and women.",
+      "brand_logo": "https://i.ibb.co.com/b6mWcWj/cats-eye.jpg",
+      "coupons": [
+        {
+          "coupon_code": "URBANWINTER",
+          "description": "Flat 500 BDT off on jackets",
+          "expiry_date": "2024-12-25",
+          "condition": "Minimum purchase of BDT 3500",
+          "coupon_type": "discount"
+        },
+        {
+          "coupon_code": "HOODIE10",
+          "description": "10% off on hoodies for students",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid with a valid student ID",
+          "coupon_type": "percentage"
+        }
+      ],
+      "shop_link": "https://www.catseye.com.bd",
+      "category": "Casual Wear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "304",
+      "brand_name": "Infinity Mega Mall",
+      "rating": 4.8,
+      "description": "Affordable winter clothing for all ages.",
+      "brand_logo": "https://i.ibb.co.com/PrtphFs/infinity-mega-mall.png",
+      "coupons": [
+        {
+          "coupon_code": "BLANKETDEAL",
+          "description": "Buy 2 sweaters, get 1 blanket free",
+          "expiry_date": "2025-01-10",
+          "condition": "Valid for select brands only",
+          "coupon_type": "offer"
+        },
+        {
+          "coupon_code": "CASHBACK5",
+          "description": "5% cashback on online purchases",
+          "expiry_date": "2024-12-31",
+          "condition": "Applicable for card payments only",
+          "coupon_type": "cashback"
+        }
+      ],
+      "shop_link": "https://www.infinity.com.bd",
+      "category": "General Fashion",
+      "isSaleOn": false
+    },
+    {
+      "_id": "305",
+      "brand_name": "Texmart",
+      "rating": 4.5,
+      "description": "Perfect winter attire with a touch of style.",
+      "brand_logo": "https://i.ibb.co.com/XLmX74x/texmart.jpg",
+      "coupons": [
+        {
+          "coupon_code": "TEXWINTER25",
+          "description": "25% off on winter cardigans",
+          "expiry_date": "2025-01-15",
+          "condition": "Limited to the first 500 customers",
+          "coupon_type": "percentage"
+        },
+        {
+          "coupon_code": "FREEMUFFLER",
+          "description": "Free muffler with purchases over BDT 4000",
+          "expiry_date": "2024-12-31",
+          "condition": "While stocks last",
+          "coupon_type": "gift"
+        }
+      ],
+      "shop_link": "https://www.texmart.com",
+      "category": "Formal Wear",
+      "isSaleOn": true
+    },
+    {
+      "_id": "306",
+      "brand_name": "Kay Kraft",
+      "rating": 4.7,
+      "description": "Fusion winter fashion for the whole family.",
+      "brand_logo": "https://i.ibb.co.com/jwgkrt8/kay-kraft.png",
+      "coupons": [
+        {
+          "coupon_code": "FAMILYWINTER",
+          "description": "10% off on family combo winter packs",
+          "expiry_date": "2024-12-28",
+          "condition": "Combo pack includes at least 3 items",
+          "coupon_type": "percentage"
+        },
+        {
+          "coupon_code": "KRAFTCARD2024",
+          "description": "Free delivery for loyalty cardholders",
+          "expiry_date": "2025-01-05",
+          "condition": "Valid for purchases above BDT 2000",
+          "coupon_type": "shipping"
+        }
+      ],
+      "shop_link": "https://www.kaykraft.com",
+      "category": "Fusion Wear",
+      "isSaleOn": true
+    }
+  ]
+  
