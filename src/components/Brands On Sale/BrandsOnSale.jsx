@@ -4,7 +4,7 @@ import Brand from "../Brand/Brand";
 
 const BrandsOnSale = () => {
     const brands = useLoaderData();
-    console.log(brands);
+    // console.log(brands);
     const {isSaleOn} =brands;
     return (
         <div>
@@ -13,10 +13,9 @@ const BrandsOnSale = () => {
             <div className="grid grid-cols-2 w-[90%] mx-auto gap-3 md:max-w-6xl 
             lg:grid-cols-5 lg:gap-12">
                 {
-                   brands.map(brand => brand.isSaleOn?<Brand brand={brand}></Brand>:'')
+                   brands.map(brand => brand.isSaleOn?<Brand key={brand._id} brand={brand}></Brand>:'')
                 }
             </div>
-            
         </div>
     );
 };

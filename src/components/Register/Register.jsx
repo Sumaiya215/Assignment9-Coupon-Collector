@@ -2,7 +2,9 @@
 import { Link, useNavigate} from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -35,10 +37,24 @@ const Register = () => {
             console.log(result.user);
             setSuccess(true);
             e.target.reset();
-            navigate('/');
+
+              // update Profile name and photo url
+            
+            updateProfile(result.user,
+                {
+                    displayName: name,
+                    photoURL: photo
+                })
+                .then(() => {
+                    console.log('user profile updated');
+                     navigate('/');
+                })
+                .catch(error => console.log('User profile update error'));  
         })
-        .catch(error => console.log('ERROR', error.message));
-        toast.error('User registration unsuccessful');
+        .catch(error => 
+            // console.log('ERROR', error.message);
+        toast.error('User registration unsuccessful')
+    );
            
     }
 
@@ -51,6 +67,7 @@ const Register = () => {
         .catch(error => console.log('ERROR',error.message));
     }
 
+   
 
     return (
         <div className="hero bg-base-100 min-h-screen mb-12">

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import './Header.css'
 import logo from '../../assets/logo.png'
 import { IoHomeOutline } from "react-icons/io5";
@@ -7,8 +7,22 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlinePeople } from "react-icons/md";
 import { IoLogInOutline } from "react-icons/io5";
 import { RiAccountBoxFill } from "react-icons/ri";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Header = () => {
+    const{user , signOutUser} = useContext(AuthContext);
+    const location = useLocation();
+    console.log(user);
+
+    const handleSignOut = () =>{
+        signOutUser()
+        .then(() =>{
+            console.log('user sign out successfully')
+        })
+        .catch(error => console.log('ERROR', error.message))
+    }
+
     const links= <>
       <li className="font-bold mr-2 "><NavLink to="/"><IoHomeOutline />Home</NavLink></li>
       <li className="font-bold mr-2"><NavLink to="/brands"><TbBrandItch />Brands</NavLink></li>
@@ -16,6 +30,14 @@ const Header = () => {
       <li className="font-bold mr-2"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li>
     </>
     return (
+        <div>
+        <div>
+            { user && location.pathname === '/' && 
+            <h2 className="text-xl font-bold text-center mt-4">Welcome to CouponZ, 
+            {user.displayName}</h2>
+
+              }
+        </div>
         <div className="navbar max-w-[1200px] mx-auto bg-cyan-600 rounded-lg my-6">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -48,9 +70,23 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login" className="btn mr-3"><IoLogInOutline /> Login</Link>
-                <Link to="/register" className="btn mr-3"><RiAccountBoxFill /> Register</Link>
+
+            {
+                    user ?
+                    <>
+                    <img className="w-[30px] rounded-full mr-2" src={user.photoURL} alt="user" />
+                    <span>{user.email}</span>
+                    <a onClick={handleSignOut} className="btn mx-3">Log Out</a>
+                    </>
+                    :
+                    <>
+                      <Link to="/login" className="btn mr-3"><IoLogInOutline /> Login</Link>
+                      <Link to="/register" className="btn mr-3"><RiAccountBoxFill /> Register</Link>
+                   </>
+                }
+                
             </div>
+        </div>
         </div>
     );
 };
