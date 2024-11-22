@@ -18,6 +18,9 @@ import AboutUs from './components/About Us/AboutUs.jsx';
 import AuthProvider from './components/Providers/AuthProvider.jsx';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './components/Routes/PrivateRoute.jsx';
+import Coupon from './components/CouponPage/CouponPage.jsx';
+import CouponPage from './components/CouponPage/CouponPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,8 +47,19 @@ const router = createBrowserRouter([
         element:<Register></Register>
       },
       {
+        path:'/coupon/:_id',
+        loader:async({params})=>{ 
+          const res = await fetch('/brands.json')
+          const data = await res.json()
+          console.log(data,params._id);
+          const singleData = data.find(p=> p._id == params._id)
+          return singleData;
+        },
+        element:<PrivateRoute><CouponPage></CouponPage></PrivateRoute>
+      },
+      {
         path:'/myProfile',
-        element:<MyProfile></MyProfile>
+        element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
         path:'/aboutUs',

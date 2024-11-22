@@ -26,8 +26,13 @@ const Header = () => {
     const links= <>
       <li className="font-bold mr-2 "><NavLink to="/"><IoHomeOutline />Home</NavLink></li>
       <li className="font-bold mr-2"><NavLink to="/brands"><TbBrandItch />Brands</NavLink></li>
-      <li className="font-bold"><NavLink to="/myProfile"><CgProfile /> My Profile</NavLink></li>
-      <li className="font-bold mr-2"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li>
+      {
+        user && <>
+        {/* <li className="font-bold mr-2"><NavLink to={`/coupon/${brand._id}`}><RiCoupon3Line />Coupon</NavLink></li> */}
+        <li className="font-bold mr-2"><NavLink to="/myProfile"><CgProfile /> My Profile</NavLink></li>
+        </>
+      }
+      <li className="font-bold"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li>
     </>
     return (
         <div>

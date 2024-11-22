@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Brand2 = ({ brand }) => {
-    const { brand_logo, brand_name, rating, description, isSaleOn } = brand;
+    const {_id, brand_logo, brand_name, rating, description, isSaleOn } = brand;
     return (
         <div className="max-w-6xl mx-auto  mt-6 mb-8">
             <div className="card card-side  bg-base-200 p-8 flex justify-between items-center shadow-xl">
@@ -23,7 +24,7 @@ const Brand2 = ({ brand }) => {
                     <p>{description}</p>
                 </div>
                 <div className="">
-                    <button className="btn text-base text-white font-bold bg-cyan-600">View Coupons</button>
+                    <Link to={`/coupon/${_id}`} className="btn text-base text-white font-bold bg-cyan-600">View Coupons</Link>
                     {
                         isSaleOn && <p className="text-cyan-700 text-lg 
                             font-semibold mt-4 ml-8 animate-bounce">Sale is on</p>

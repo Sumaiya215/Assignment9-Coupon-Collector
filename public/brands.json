@@ -1,6 +1,6 @@
 [
     {
-      "_id": "301",
+      "_id": 301,
       "brand_name": "Yellow",
       "rating": 4.7,
       "description": "Trendy and premium winter fashion for all.",
@@ -21,12 +21,12 @@
           "coupon_type": "gift"
         }
       ],
-      "shop_link": "https://www.yellow.com.bd",
+      "shop_link": "https://www.yellowclothing.net",
       "category": "Fashion",
       "isSaleOn": true
     },
     {
-      "_id": "302",
+      "_id": 302,
       "brand_name": "Aarong",
       "rating": 4.9,
       "description": "Authentic Bangladeshi fashion for winter elegance.",
@@ -52,7 +52,7 @@
       "isSaleOn": true
     },
     {
-      "_id": "303",
+      "_id": 303,
       "brand_name": "Cats Eye",
       "rating": 4.6,
       "description": "Urban winter styles for men and women.",
@@ -78,7 +78,7 @@
       "isSaleOn": true
     },
     {
-      "_id": "304",
+      "_id": 304,
       "brand_name": "Infinity Mega Mall",
       "rating": 4.8,
       "description": "Affordable winter clothing for all ages.",
@@ -104,7 +104,7 @@
       "isSaleOn": false
     },
     {
-      "_id": "305",
+      "_id": 305,
       "brand_name": "Texmart",
       "rating": 4.5,
       "description": "Perfect winter attire with a touch of style.",
@@ -130,7 +130,7 @@
       "isSaleOn": true
     },
     {
-      "_id": "306",
+      "_id": 306,
       "brand_name": "Kay Kraft",
       "rating": 4.7,
       "description": "Fusion winter fashion for the whole family.",
