@@ -14,12 +14,10 @@ import Brands from './components/Brands/Brands.jsx';
 import MyProfile from './components/My Profile/MyProfile.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
-import AboutUs from './components/About Us/AboutUs.jsx';
 import AuthProvider from './components/Providers/AuthProvider.jsx';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/Routes/PrivateRoute.jsx';
-import Coupon from './components/CouponPage/CouponPage.jsx';
 import CouponPage from './components/CouponPage/CouponPage.jsx';
 import UpdateProfile from './components/Update Profile/UpdateProfile.jsx';
 
