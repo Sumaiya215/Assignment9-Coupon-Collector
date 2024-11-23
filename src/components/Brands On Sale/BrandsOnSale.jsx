@@ -1,3 +1,4 @@
+import 'animate.css';
 import { useLoaderData } from "react-router-dom";
 import Brand from "../Brand/Brand";
 
@@ -9,7 +10,8 @@ const BrandsOnSale = () => {
     return (
         <div>
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center
-            lg:max-w-6xl mx-auto lg:text-left">Brands on Sale</h2>
+            lg:max-w-6xl mx-auto lg:text-left animate__animated 
+            animate__bounce ">Brands on Sale</h2>
             <div className="grid grid-cols-2 w-[90%] mx-auto gap-3 md:max-w-6xl 
             lg:grid-cols-5 lg:gap-12">
                 {
