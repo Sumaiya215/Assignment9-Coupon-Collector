@@ -2,6 +2,7 @@
 
 ## Purpose
 CouponZ is a platform that allows users to explore brands, view exciting coupons, and utilize them effortlessly. It offers a secure experience by implementing private routes for logged-in users and includes profile management and coupon usage tracking.
+This project mainly focuses on user authentication using firebase with email-password and google.
 
 ## Live URL
 [Live Demo](https://couponz-a9.netlify.app/)
