@@ -60,8 +60,8 @@ const Login = () => {
     
 
     return (
-        <div className="hero bg-base-100 min-h-screen">
-            <div className="hero-content w-[760px] mx-auto flex-col ">
+        <div className="hero bg-base-100 min-h-screen mx">
+            <div className="hero-content max-w-[350px]  lg:w-[760px] mx-auto flex-col ">
                 <div className="text-center lg:text-left">
                     <h3 className="text-3xl font-bold">Login now!</h3>
                 </div>
