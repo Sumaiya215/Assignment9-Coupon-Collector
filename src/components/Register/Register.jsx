@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
     const {createUser ,signInWithGoogle} = useContext(AuthContext);
     const[success,setSuccess] = useState(false);
     const[errorMessage, setErrorMessage] = useState('');
+    const[showPassword, setShowPassword] = useState(false);
    
 
     const handleRegister = e => {
@@ -95,11 +97,19 @@ const Register = () => {
                         </label>
                         <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text text-xl font-bold">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                        <input type={showPassword?'text':'password'} name="password" 
+                        placeholder="password" className="input input-bordered" required />
+                        <button onClick={()=> setShowPassword(!showPassword)}
+                            className="btn btn-sm absolute right-2 top-14">
+                           {
+                            showPassword ?<FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                           }     
+
+                        </button>
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-cyan-700 text-lg h-[60px] font-semibold text-white">Register</button>

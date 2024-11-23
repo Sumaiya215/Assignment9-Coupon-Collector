@@ -21,6 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/Routes/PrivateRoute.jsx';
 import Coupon from './components/CouponPage/CouponPage.jsx';
 import CouponPage from './components/CouponPage/CouponPage.jsx';
+import UpdateProfile from './components/Update Profile/UpdateProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -62,9 +63,13 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
       },
       {
-        path:'/aboutUs',
-        element:<AboutUs></AboutUs>      
-      }
+        path:'/updateProfile',
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      // {
+      //   path:'/aboutUs',
+      //   element:<AboutUs></AboutUs>      
+      // }
     ]
   },
 ]);

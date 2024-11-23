@@ -28,11 +28,11 @@ const Header = () => {
       <li className="font-bold mr-2"><NavLink to="/brands"><TbBrandItch />Brands</NavLink></li>
       {
         user && <>
-        {/* <li className="font-bold mr-2"><NavLink to={`/coupon/${brand._id}`}><RiCoupon3Line />Coupon</NavLink></li> */}
         <li className="font-bold mr-2"><NavLink to="/myProfile"><CgProfile /> My Profile</NavLink></li>
+        <li className="font-bold mr-2"><NavLink to="/updateProfile"><CgProfile />Update Profile</NavLink></li>
         </>
       }
-      <li className="font-bold"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li>
+      {/* <li className="font-bold mr-2"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li> */}
     </>
     return (
         <div>
@@ -79,7 +79,7 @@ const Header = () => {
             {
                     user ?
                     <>
-                    <img className="w-[30px] rounded-full mr-2" src={user.photoURL} alt="user" />
+                    <img className="w-[30px] h-[25px] rounded-full mr-3" src={user.photoURL} alt="user" />
                     <span>{user.email}</span>
                     <a onClick={handleSignOut} className="btn mx-3">Log Out</a>
                     </>
