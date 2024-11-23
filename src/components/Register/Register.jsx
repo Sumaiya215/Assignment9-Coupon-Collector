@@ -115,10 +115,7 @@ const Register = () => {
                         <button className="btn bg-cyan-700 text-lg h-[60px] font-semibold text-white">Register</button>
                     </div>
                 </form>
-{/* 
-                {
-                    registerError && <p className="ml-8 mb-4 text-red-600">{registerError}</p>
-                } */}
+
                 {
                     errorMessage && <p className="text-red-600 ml-4 mb-4">{errorMessage}</p>
                 }

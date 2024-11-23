@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+// import App from './App.jsx'
 
 import {
   createBrowserRouter,
@@ -66,10 +66,7 @@ const router = createBrowserRouter([
         path:'/updateProfile',
         element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       },
-      // {
-      //   path:'/aboutUs',
-      //   element:<AboutUs></AboutUs>      
-      // }
+      
     ]
   },
 ]);

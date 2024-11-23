@@ -32,7 +32,7 @@ const Header = () => {
         <li className="font-bold mr-2"><NavLink to="/updateProfile"><CgProfile />Update Profile</NavLink></li>
         </>
       }
-      {/* <li className="font-bold mr-2"><NavLink to="/aboutUs"><MdOutlinePeople /> About Us</NavLink></li> */}
+      
     </>
     return (
         <div>
@@ -66,7 +66,7 @@ const Header = () => {
                             {links}
                     </ul>
                 </div>
-                {/* <a className="btn btn-ghost text-xl">logo</a> */}
+              
                 <img className="w-[100px] ml-3" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">

@@ -10,7 +10,7 @@ const Login = () => {
     const[loginError,setLoginError] = useState('');
     const {signInUser , signInWithGoogle} = useContext(AuthContext);
     const emailRef = useRef();
-    // const [email,setEmail] = ('');
+  
 
     const handleLogin = e => {
         e.preventDefault();
@@ -45,7 +45,7 @@ const Login = () => {
     const handleForgetPassword = () => {
         console.log("Email address is:", emailRef.current.value);
         const email = emailRef.current.value;
-        // setEmail(emailRef.current.value);
+        
 
         if(!email){
             console.log('Please provide a valid email address');
@@ -89,9 +89,7 @@ const Login = () => {
                     <p className="ml-8 mb-4 font-semibold">
                         New to this website? please <Link className="text-blue-500" to="/register">Register</Link>
                     </p>
-                    {/* {
-                        email && <p className="ml-8 mb-4 text-lg">{setEmail}</p>
-                    } */}
+                   
                     {
                         loginError && <p className="ml-8 mb-4 text-red-600">{loginError}</p>
                     }
